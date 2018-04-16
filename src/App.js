@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
@@ -97,7 +96,7 @@ class App extends Component {
           })
             .then(response => response.json())
             .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count.entries}))
+              this.setState(Object.assign(this.state.user, { entries: count}))
             })
               .catch(err => console.log(err));
         }
